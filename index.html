@@ -4,8 +4,8 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Frontend Task</title>
-    <link rel="stylesheet" href="Frontend.css">
-    <script src="Frontend.js" defer></script>
+    <link rel="stylesheet" href="style.css">
+    <script src="script.js" defer></script>
     <link rel="stylesheet"href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
 </head>
 <body>
@@ -14,9 +14,9 @@
     <img src="Images/logo_black.svg" alt="logo">
   </a>
 
-  <button class="theme-toggle">
+  <button class="theme-toggle" id="themeToggle" type="button">
     <span id="themeLabel"><b>DARK</b></span>
-    <img src="Images/Theme Icon.svg" alt="moon" id="themeIcon">
+    <span id="themeIcon" aria-hidden="true">☾</span>
   </button>
 </header>
        
@@ -40,15 +40,16 @@
     </button>
 
 </form>
+    <section id="planetDetails" aria-live="polite"></section>
     <Main>
 
     <section>
-        <h2 id="planetaryFacts">Planetary Facts at a Glance</h2>
+        <h2 id="PlanetaryFacts">Planetary Facts at a Glance</h2>
         <p>Below is a comparative table of major planets in our solar system. The data highlights key physical properties used by astronomers and researchers worldwide. </p>
     </section>
-    <section class="table section" id="table-section">
+    <section class="table-section" id="table-section">
         <table class="planet-table">
-          <caption><b>Data about the planets in our solar system(planetary facts from Nasa)</b></caption>
+          <caption><b>Data about the planets of our solar system (Planetary facts taken from NASA)</b></caption>
           <thead>
             <tr>
               <th colspan="2"></th>
@@ -59,7 +60,7 @@
           </thead>
           <tbody>
             <tr>
-              <th class="group-header" rowspan="4" colspan="2">Terrestrial Planets</th>
+              <th class="group-header" rowspan="4" colspan="2">Terrestrial<br>Planets</th>
               <th>Mercury</th>
               <td>0.330</td>
               <td>4,879</td>
@@ -80,7 +81,7 @@
               <td>4,878</td>
             </tr>
             <tr>
-              <th class="group-header" rowspan="4">Jovian Planets</th>
+              <th class="group-header" rowspan="4">Jovian<br>Planets</th>
               <th class="group-header" rowspan="2">Gas Giants</th>
               <th>Jupiter</th>
               <td>0.330</td>
